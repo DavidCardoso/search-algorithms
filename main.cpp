@@ -23,7 +23,7 @@
 #include <chrono>           // usado para calcula tempo de execução
 #include "aux.h"            // funções e recursos auxiliares
 #include "searchs.h"        // funções de busca
-//#include <sys/resource.h>   // usado para aumentar o tamanho da pilha em UNIX Based Systems
+#include <sys/resource.h>   // usado para aumentar o tamanho da pilha em UNIX Based Systems
 
 using namespace	std;
 using namespace std::chrono;
