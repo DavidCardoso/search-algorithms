@@ -77,7 +77,7 @@ int main(int argc, char const *argv[]){
     // aumentando o tamanho da pilha em UNIX Based Systems
     // struct rlimit r1;
     // getrlimit(RLIMIT_STACK, &r1);
-    // r1.rlim_cur = 128000000;
+    // r1.rlim_cur = 16000000;
     // setrlimit(RLIMIT_STACK, &r1);
 
     // limpa console

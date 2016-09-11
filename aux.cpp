@@ -65,9 +65,6 @@ bool seleciona_busca(Searchs opcao, pSearch* p_search){
         break;
 
         default:
-            cerr << "Nenhum algoritmo de busca equivalente ao informado pelo usuario!" << endl;
-            cerr << "Algoritmos validos: BSI, BSR, BBI, BBR, BTI ou BTR." << endl;
-            cerr << "Finalizando programa..." << endl;
             return false;
     }
 }
