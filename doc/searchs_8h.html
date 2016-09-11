@@ -91,37 +91,49 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 
 <p>Funções de busca.  
 <a href="#details">Mais...</a></p>
-<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
-<code>#include &lt;sstream&gt;</code><br />
-<code>#include &lt;fstream&gt;</code><br />
-<code>#include &lt;cmath&gt;</code><br />
-<code>#include &lt;string&gt;</code><br />
-<code>#include &lt;cstring&gt;</code><br />
-<code>#include &lt;chrono&gt;</code><br />
-<code>#include &quot;<a class="el" href="aux_8h_source.html">aux.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="aux_8h_source.html">aux.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Gráfico de dependência de inclusões para searchs.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="searchs_8h__incl.png" border="0" usemap="#searchs_8h" alt=""/></div>
+<map name="searchs_8h" id="searchs_8h">
+<area shape="rect" id="node2" href="aux_8h.html" title="Funções, registros, enumerações e outros recursos auxiliares. " alt="" coords="287,80,342,107"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com este arquivo:</div>
+<div class="dyncontent">
+<div class="center"><img src="searchs_8h__dep__incl.png" border="0" usemap="#searchs_8hdep" alt=""/></div>
+<map name="searchs_8hdep" id="searchs_8hdep">
+<area shape="rect" id="node2" href="aux_8h.html" title="Funções, registros, enumerações e outros recursos auxiliares. " alt="" coords="85,80,140,107"/>
+<area shape="rect" id="node3" href="aux_8cpp.html" title="Funções e outros recursos auxiliares. " alt="" coords="5,155,73,181"/>
+<area shape="rect" id="node4" href="main_8cpp.html" title="Programa Algoritmos de Busca. " alt="" coords="98,155,173,181"/>
+<area shape="rect" id="node5" href="searchs_8cpp.html" title="Funções de busca. " alt="" coords="197,155,290,181"/>
+</map>
+</div>
 </div>
 <p><a href="searchs_8h_source.html">Vá para o código-fonte deste arquivo.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Funções</h2></td></tr>
-<tr class="memitem:a72110754b7210de347ba7707a8b3c738"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="searchs_8h.html#a72110754b7210de347ba7707a8b3c738">busca_sequencial_ite</a> (int chave, int *vetor, int tamanho)</td></tr>
-<tr class="memdesc:a72110754b7210de347ba7707a8b3c738"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função busca sequencial na forma iterativa.  <a href="#a72110754b7210de347ba7707a8b3c738">Mais...</a><br /></td></tr>
-<tr class="separator:a72110754b7210de347ba7707a8b3c738"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac66c550c2e830fc2de1b6f8ee6d9c86d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="searchs_8h.html#ac66c550c2e830fc2de1b6f8ee6d9c86d">busca_sequencial_rec</a> (int chave, int *vetor, int tamanho)</td></tr>
-<tr class="memdesc:ac66c550c2e830fc2de1b6f8ee6d9c86d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função busca sequencial na forma recursiva.  <a href="#ac66c550c2e830fc2de1b6f8ee6d9c86d">Mais...</a><br /></td></tr>
-<tr class="separator:ac66c550c2e830fc2de1b6f8ee6d9c86d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a251f2ed2cc1620222329912334cb10"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="searchs_8h.html#a1a251f2ed2cc1620222329912334cb10">busca_binaria_ite</a> (int chave, int *vetor, int tamanho)</td></tr>
-<tr class="memdesc:a1a251f2ed2cc1620222329912334cb10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função busca binária na forma iterativa.  <a href="#a1a251f2ed2cc1620222329912334cb10">Mais...</a><br /></td></tr>
-<tr class="separator:a1a251f2ed2cc1620222329912334cb10"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac204839845b0d88bb00edec7a6d28288"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="searchs_8h.html#ac204839845b0d88bb00edec7a6d28288">busca_binaria_rec</a> (int chave, int *vetor, int tamanho)</td></tr>
-<tr class="memdesc:ac204839845b0d88bb00edec7a6d28288"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função busca binária na forma recursiva.  <a href="#ac204839845b0d88bb00edec7a6d28288">Mais...</a><br /></td></tr>
-<tr class="separator:ac204839845b0d88bb00edec7a6d28288"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4824d8b251b14b397c38fce485a7130"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="searchs_8h.html#ab4824d8b251b14b397c38fce485a7130">busca_ternaria_ite</a> (int chave, int *vetor, int tamanho)</td></tr>
-<tr class="memdesc:ab4824d8b251b14b397c38fce485a7130"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função busca ternária na forma iterativa.  <a href="#ab4824d8b251b14b397c38fce485a7130">Mais...</a><br /></td></tr>
-<tr class="separator:ab4824d8b251b14b397c38fce485a7130"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6f9f1dea199c5d4f0ea93c614b20603"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="searchs_8h.html#ac6f9f1dea199c5d4f0ea93c614b20603">busca_ternaria_rec</a> (int chave, int *vetor, int tamanho)</td></tr>
-<tr class="memdesc:ac6f9f1dea199c5d4f0ea93c614b20603"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função busca ternária na forma recursiva.  <a href="#ac6f9f1dea199c5d4f0ea93c614b20603">Mais...</a><br /></td></tr>
-<tr class="separator:ac6f9f1dea199c5d4f0ea93c614b20603"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5e71ba34e6346e42dfd1248021fb5db"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="searchs_8h.html#ab5e71ba34e6346e42dfd1248021fb5db">busca_sequencial_ite</a> (int chave, int *vetor, int left, int tamanho)</td></tr>
+<tr class="memdesc:ab5e71ba34e6346e42dfd1248021fb5db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função busca SEQUENCIAL na forma ITERATIVA.  <a href="#ab5e71ba34e6346e42dfd1248021fb5db">Mais...</a><br /></td></tr>
+<tr class="separator:ab5e71ba34e6346e42dfd1248021fb5db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb28275bb5edb3ef29e583593334a0d3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="searchs_8h.html#adb28275bb5edb3ef29e583593334a0d3">busca_sequencial_rec</a> (int chave, int *vetor, int left, int tamanho)</td></tr>
+<tr class="memdesc:adb28275bb5edb3ef29e583593334a0d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função busca SEQUENCIAL na forma RECURSIVA.  <a href="#adb28275bb5edb3ef29e583593334a0d3">Mais...</a><br /></td></tr>
+<tr class="separator:adb28275bb5edb3ef29e583593334a0d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbc2cdce89b6af68d457b970d6ac7f0a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="searchs_8h.html#acbc2cdce89b6af68d457b970d6ac7f0a">busca_binaria_ite</a> (int chave, int *vetor, int left, int tamanho)</td></tr>
+<tr class="memdesc:acbc2cdce89b6af68d457b970d6ac7f0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função busca BINÁRIA na forma ITERATIVA.  <a href="#acbc2cdce89b6af68d457b970d6ac7f0a">Mais...</a><br /></td></tr>
+<tr class="separator:acbc2cdce89b6af68d457b970d6ac7f0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59dce0b43dbceaf5d889f44a9a813a2b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="searchs_8h.html#a59dce0b43dbceaf5d889f44a9a813a2b">busca_binaria_rec</a> (int chave, int *vetor, int left, int right)</td></tr>
+<tr class="memdesc:a59dce0b43dbceaf5d889f44a9a813a2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função busca BINÁRIA na forma RECURSIVA.  <a href="#a59dce0b43dbceaf5d889f44a9a813a2b">Mais...</a><br /></td></tr>
+<tr class="separator:a59dce0b43dbceaf5d889f44a9a813a2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabdfb31ebbf84a98de389021cd52793d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="searchs_8h.html#aabdfb31ebbf84a98de389021cd52793d">busca_ternaria_ite</a> (int chave, int *vetor, int left, int tamanho)</td></tr>
+<tr class="memdesc:aabdfb31ebbf84a98de389021cd52793d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função busca TERNÁRIA na forma ITERATIVA.  <a href="#aabdfb31ebbf84a98de389021cd52793d">Mais...</a><br /></td></tr>
+<tr class="separator:aabdfb31ebbf84a98de389021cd52793d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adee4f0d7be9715b2549b93c749dc05b3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="searchs_8h.html#adee4f0d7be9715b2549b93c749dc05b3">busca_ternaria_rec</a> (int chave, int *vetor, int left, int tamanho)</td></tr>
+<tr class="memdesc:adee4f0d7be9715b2549b93c749dc05b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função busca TERNÁRIA na forma RECURSIVA.  <a href="#adee4f0d7be9715b2549b93c749dc05b3">Mais...</a><br /></td></tr>
+<tr class="separator:adee4f0d7be9715b2549b93c749dc05b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descrição Detalhada</h2>
 <div class="textblock"><p>Funções de busca. </p>
@@ -131,7 +143,7 @@ Funções</h2></td></tr>
 <dl class="section copyright"><dt>Copyright</dt><dd>2016 - All rights reserveds </dd></dl>
 <dl class="section see"><dt>Veja também</dt><dd><a href="http://projetos.imd.ufrn.br/davidcardoso-ti/imd0030-projeto1/blob/master/searchs.h">http://projetos.imd.ufrn.br/davidcardoso-ti/imd0030-projeto1/blob/master/searchs.h</a> </dd></dl>
 </div><h2 class="groupheader">Funções</h2>
-<a class="anchor" id="a1a251f2ed2cc1620222329912334cb10"></a>
+<a class="anchor" id="acbc2cdce89b6af68d457b970d6ac7f0a"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -151,6 +163,12 @@ Funções</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>left</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>tamanho</em>&#160;</td>
         </tr>
         <tr>
@@ -161,7 +179,7 @@ Funções</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Função busca binária na forma iterativa. </p>
+<p>Função busca BINÁRIA na forma ITERATIVA. </p>
 <p>Esse tipo de busca utiliza a idea de 'dividir para conquistar'. O vetor é dividido gradativamente em duas partes e sendo testado em qual parte deve estar a chave até encontrá-la ou atingir um subvetor unitário. O vetor precisa estar ordenado. </p><dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
     <tr><td class="paramname">chave</td><td>valor a ser encontrado no vetor </td></tr>
@@ -171,11 +189,12 @@ Funções</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Retorna</dt><dd>retorna o indice da posição que se encontra a chave ou -1, caso não encontre </dd></dl>
+<p>&lt; right - fim do trecho a ser testado</p>
 <p>&lt; meio - indice entre as duas partes do vetor </p>
 
 </div>
 </div>
-<a class="anchor" id="ac204839845b0d88bb00edec7a6d28288"></a>
+<a class="anchor" id="a59dce0b43dbceaf5d889f44a9a813a2b"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -195,7 +214,13 @@ Funções</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>tamanho</em>&#160;</td>
+          <td class="paramname"><em>left</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>right</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -205,20 +230,32 @@ Funções</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Função busca binária na forma recursiva. </p>
+<p>Função busca BINÁRIA na forma RECURSIVA. </p>
 <p>Esse tipo de busca utiliza a idea de 'dividir para conquistar'. O vetor é dividido gradativamente em duas partes e sendo testado em qual parte deve estar a chave até encontrá-la ou atingir um subvetor unitário. O vetor precisa estar ordenado. </p><dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
     <tr><td class="paramname">chave</td><td>valor a ser encontrado no vetor </td></tr>
     <tr><td class="paramname">vetor</td><td>vetor a ser percorrido </td></tr>
-    <tr><td class="paramname">tamanho</td><td>tamanho do vetor </td></tr>
+    <tr><td class="paramname">left</td><td>inicio do trecho a ser testado </td></tr>
+    <tr><td class="paramname">right</td><td>fim do trecho a ser testado </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Retorna</dt><dd>retorna o indice da posição que se encontra a chave ou -1, caso não encontre </dd></dl>
+<p>&lt; meio - indice entre as duas partes do vetor </p>
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="searchs_8h_a59dce0b43dbceaf5d889f44a9a813a2b_cgraph.png" border="0" usemap="#searchs_8h_a59dce0b43dbceaf5d889f44a9a813a2b_cgraph" alt=""/></div>
+<map name="searchs_8h_a59dce0b43dbceaf5d889f44a9a813a2b_cgraph" id="searchs_8h_a59dce0b43dbceaf5d889f44a9a813a2b_cgraph">
+<area shape="rect" id="node2" href="searchs_8cpp.html#a59dce0b43dbceaf5d889f44a9a813a2b" title="Função busca BINÁRIA na forma RECURSIVA. " alt="" coords="180,29,307,56"/>
+</map>
+</div>
+</p>
 
 </div>
 </div>
-<a class="anchor" id="a72110754b7210de347ba7707a8b3c738"></a>
+<a class="anchor" id="ab5e71ba34e6346e42dfd1248021fb5db"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -238,6 +275,12 @@ Funções</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>left</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>tamanho</em>&#160;</td>
         </tr>
         <tr>
@@ -248,7 +291,7 @@ Funções</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Função busca sequencial na forma iterativa. </p>
+<p>Função busca SEQUENCIAL na forma ITERATIVA. </p>
 <p>Esse tipo de busca testa cada elemento do vetor até encontrar a chave ou atingir o final do vetor. O vetor não precisa estar ordenado. </p><dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
     <tr><td class="paramname">chave</td><td>valor a ser encontrado no vetor </td></tr>
@@ -262,7 +305,7 @@ Funções</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ac66c550c2e830fc2de1b6f8ee6d9c86d"></a>
+<a class="anchor" id="adb28275bb5edb3ef29e583593334a0d3"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -282,6 +325,12 @@ Funções</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>left</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>tamanho</em>&#160;</td>
         </tr>
         <tr>
@@ -292,7 +341,7 @@ Funções</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Função busca sequencial na forma recursiva. </p>
+<p>Função busca SEQUENCIAL na forma RECURSIVA. </p>
 <p>Esse tipo de busca testa cada elemento do vetor até encontrar a chave ou atingir o final do vetor. O vetor não precisa estar ordenado. </p><dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
     <tr><td class="paramname">chave</td><td>valor a ser encontrado no vetor </td></tr>
@@ -303,9 +352,19 @@ Funções</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Retorna</dt><dd>retorna o indice da posição que se encontra a chave ou -1, caso não encontre </dd></dl>
 
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="searchs_8h_adb28275bb5edb3ef29e583593334a0d3_cgraph.png" border="0" usemap="#searchs_8h_adb28275bb5edb3ef29e583593334a0d3_cgraph" alt=""/></div>
+<map name="searchs_8h_adb28275bb5edb3ef29e583593334a0d3_cgraph" id="searchs_8h_adb28275bb5edb3ef29e583593334a0d3_cgraph">
+<area shape="rect" id="node2" href="searchs_8cpp.html#adb28275bb5edb3ef29e583593334a0d3" title="Função busca SEQUENCIAL na forma RECURSIVA. " alt="" coords="204,29,355,56"/>
+</map>
+</div>
+</p>
+
 </div>
 </div>
-<a class="anchor" id="ab4824d8b251b14b397c38fce485a7130"></a>
+<a class="anchor" id="aabdfb31ebbf84a98de389021cd52793d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -325,6 +384,12 @@ Funções</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>left</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>tamanho</em>&#160;</td>
         </tr>
         <tr>
@@ -335,7 +400,7 @@ Funções</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Função busca ternária na forma iterativa. </p>
+<p>Função busca TERNÁRIA na forma ITERATIVA. </p>
 <p>Esse tipo de busca utiliza a idea de 'dividir para conquistar'. O vetor é dividido gradativamente em três partes e sendo testado em qual parte deve estar a chave até encontrá-la ou atingir um subvetor unitário. O vetor precisa estar ordenado. </p><dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
     <tr><td class="paramname">chave</td><td>valor a ser encontrado no vetor </td></tr>
@@ -348,7 +413,7 @@ Funções</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ac6f9f1dea199c5d4f0ea93c614b20603"></a>
+<a class="anchor" id="adee4f0d7be9715b2549b93c749dc05b3"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -368,6 +433,12 @@ Funções</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>left</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>tamanho</em>&#160;</td>
         </tr>
         <tr>
@@ -378,7 +449,7 @@ Funções</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Função busca ternária na forma recursiva. </p>
+<p>Função busca TERNÁRIA na forma RECURSIVA. </p>
 <p>Esse tipo de busca utiliza a idea de 'dividir para conquistar'. O vetor é dividido gradativamente em três partes e sendo testado em qual parte deve estar a chave até encontrá-la ou atingir um subvetor unitário. O vetor precisa estar ordenado. </p><dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
     <tr><td class="paramname">chave</td><td>valor a ser encontrado no vetor </td></tr>

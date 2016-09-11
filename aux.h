@@ -6,33 +6,32 @@
 * @since		10/09/2016
 * @date			13/09/2016
 * @copyright 	2016 - All rights reserveds
-* @sa 			http://projetos.imd.ufrn.br/davidcardoso-ti/imd0030-projeto1/blob/master/searchs.h
+* @sa 			http://projetos.imd.ufrn.br/davidcardoso-ti/imd0030-projeto1/blob/master/aux.h
 */
 
 #ifndef 	_AUX_H_
 #define 	_AUX_H_
 #pragma		once
 
-#include <iostream>
-#include <sstream>
-#include <fstream>
-#include <cmath>
-#include <string>
-#include <cstring>
-#include <chrono>
+#include <iostream>         // iostream - in|out streams
+#include <sstream>          // memory streams
+#include <fstream>          // file streams
+#include <cmath>            // biblioteca matemática
+#include <string>           // classe string
+#include <cstring>          // manipulação de strings
+#include <chrono>           // usado para calcula tempo de execução
 #include "searchs.h"
 
 using namespace std;
 using namespace std::chrono;
 
 // Ponteiro para função de busca
-using pSearch = int (*)(int, int*, int);
+using pSearch = int (*)(int, int*, int, int);
 
 /**
  * Enumeração Searchs com os tipos de busca permitidos
  */
-enum Searchs
-{
+enum Searchs {
 	BSI,	/**< Busca Sequencial Iterativa */
 	BSR,	/**< Busca Sequencial Recursiva */
 	BBI,	/**< Busca Binária Iterativa */

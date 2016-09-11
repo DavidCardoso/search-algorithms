@@ -6,16 +6,16 @@
 * @since		10/09/2016
 * @date			13/09/2016
 * @copyright 	2016 - All rights reserveds
-* @sa 			http://projetos.imd.ufrn.br/davidcardoso-ti/imd0030-projeto1/blob/master/searchs.h
+* @sa 			http://projetos.imd.ufrn.br/davidcardoso-ti/imd0030-projeto1/blob/master/aux.cpp
 */
 
-#include <iostream>
-#include <sstream>
-#include <fstream>
-#include <cmath>
-#include <string>
-#include <cstring>
-#include <chrono>
+// #include <iostream>
+// #include <sstream>
+// #include <fstream>
+// #include <cmath>
+// #include <string>
+// #include <cstring>
+// #include <chrono>
 #include "aux.h"
 #include "searchs.h"
 
@@ -24,11 +24,7 @@ using namespace std::chrono;
 
 
 /**
- * @brief 		 	Função para selecionar o tipo de busca
- * @details		 	Trata o tipo de busca e define o ponteiro de busca para apontar para a função de busca corretamente
- * @param  opcao 	tipo de busca
- * @param  p_search	ponteiro de funcao busca
- * @return       	true ou false'
+ * @brief 	Função para selecionar o tipo de busca
  */
 bool seleciona_busca(Searchs opcao, pSearch* p_search){
 
@@ -70,10 +66,7 @@ bool seleciona_busca(Searchs opcao, pSearch* p_search){
 }
 
 /**
- * @brief             Função workloadFill
- * @details           Preenche o vetor a ser usado como workload
- * @param v           ponteiro para o vetor
- * @param size_vector tamanho do vetor
+ * @brief 	Função workloadFill
  */
 void workloadFill(int* v, int size_vector){
     for (int i = 0; i < size_vector; i++) {

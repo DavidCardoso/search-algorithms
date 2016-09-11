@@ -14,16 +14,16 @@
 * @sa 			http://projetos.imd.ufrn.br/davidcardoso-ti/imd0030-projeto1/blob/master/main.cpp
 */
 
-#include <iostream>         // in|out streams
+#include <iostream>         // iostream - in|out streams
 #include <sstream>          // memory streams
 #include <fstream>          // file streams
 #include <cmath>            // biblioteca matemática
 #include <string>           // classe string
 #include <cstring>          // manipulação de strings
-#include <chrono>           // usado para calcula tempo de execução
+#include <chrono>           // usado para calcular tempo de execução
 #include "aux.h"            // funções e recursos auxiliares
 #include "searchs.h"        // funções de busca
-#include <sys/resource.h>   // usado para aumentar o tamanho da pilha em UNIX Based Systems
+// #include <sys/resource.h>   // usado para aumentar o tamanho da pilha em UNIX Based Systems
 
 using namespace	std;
 using namespace std::chrono;
@@ -84,7 +84,7 @@ int main(int argc, char const *argv[]){
     system("clear");
 
     pSearch p_search;                                           /**< p_search   - Ponteiro para função de busca */
-    bool    selected = seleciona_busca(search_type, &p_search); /**< selectec   - testa se selecionou corretamente a função de busca */
+    bool    selected = seleciona_busca(search_type, &p_search); /**< selected   - testa se selecionou corretamente a função de busca */
     
     // seleciona busca
     if(!selected){
@@ -102,15 +102,15 @@ int main(int argc, char const *argv[]){
 
     cout << "Tamanho\tTempo" << endl;
     
-    // workload MISS
+    // workload
     while(workload_size > 0){
 
         // inicio da medição
         high_resolution_clock::time_point time_initial = high_resolution_clock::now();
         
-        // MISS - sempre busca elemento que não existe (impar)
-        // HIT  - busca elemento existente (par)
-        p_search(key, workload, workload_size);
+        // MISS - sempre busca elemento que não existe (key == impar)
+        // HIT  - busca elemento existente (key == par)
+        p_search(key, workload, 0, workload_size-1);
         
         // fim da medição
         high_resolution_clock::time_point time_final = high_resolution_clock::now();

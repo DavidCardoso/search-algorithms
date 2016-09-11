@@ -91,19 +91,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 
 <p>Funções e outros recursos auxiliares.  
 <a href="#details">Mais...</a></p>
-<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
-<code>#include &lt;sstream&gt;</code><br />
-<code>#include &lt;fstream&gt;</code><br />
-<code>#include &lt;cmath&gt;</code><br />
-<code>#include &lt;string&gt;</code><br />
-<code>#include &lt;cstring&gt;</code><br />
-<code>#include &lt;chrono&gt;</code><br />
-<code>#include &quot;<a class="el" href="aux_8h_source.html">aux.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="aux_8h_source.html">aux.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="searchs_8h_source.html">searchs.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Gráfico de dependência de inclusões para aux.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="aux_8cpp__incl.png" border="0" usemap="#aux_8cpp" alt=""/></div>
+<map name="aux_8cpp" id="aux_8cpp">
+<area shape="rect" id="node2" href="aux_8h.html" title="Funções, registros, enumerações e outros recursos auxiliares. " alt="" coords="410,80,465,107"/>
+<area shape="rect" id="node10" href="searchs_8h.html" title="Funções de busca. " alt="" coords="619,155,698,181"/>
+</map>
+</div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Funções</h2></td></tr>
-<tr class="memitem:aed7bbc3ea2473b1ff7cf708dd3ac3a16"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aux_8cpp.html#aed7bbc3ea2473b1ff7cf708dd3ac3a16">seleciona_busca</a> (<a class="el" href="aux_8h.html#a9700792f0e3e23ddc05e544789e2baa2">Searchs</a> opcao, pSearch *p_search)</td></tr>
+<tr class="memitem:aed7bbc3ea2473b1ff7cf708dd3ac3a16"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aux_8cpp.html#aed7bbc3ea2473b1ff7cf708dd3ac3a16">seleciona_busca</a> (<a class="el" href="aux_8h.html#a9700792f0e3e23ddc05e544789e2baa2">Searchs</a> opcao, <a class="el" href="aux_8h.html#a29c9bd2c7fa18295c42b0e2d954adfcc">pSearch</a> *p_search)</td></tr>
 <tr class="memdesc:aed7bbc3ea2473b1ff7cf708dd3ac3a16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função para selecionar o tipo de busca.  <a href="#aed7bbc3ea2473b1ff7cf708dd3ac3a16">Mais...</a><br /></td></tr>
 <tr class="separator:aed7bbc3ea2473b1ff7cf708dd3ac3a16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a536d608516a27ef26c63dbc1b8d91c28"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aux_8cpp.html#a536d608516a27ef26c63dbc1b8d91c28">workloadFill</a> (int *v, int size_vector)</td></tr>
@@ -116,7 +118,7 @@ Funções</h2></td></tr>
 <dl class="section since"><dt>Desde</dt><dd>10/09/2016 </dd></dl>
 <dl class="section date"><dt>Data</dt><dd>13/09/2016 </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>2016 - All rights reserveds </dd></dl>
-<dl class="section see"><dt>Veja também</dt><dd><a href="http://projetos.imd.ufrn.br/davidcardoso-ti/imd0030-projeto1/blob/master/searchs.h">http://projetos.imd.ufrn.br/davidcardoso-ti/imd0030-projeto1/blob/master/searchs.h</a> </dd></dl>
+<dl class="section see"><dt>Veja também</dt><dd><a href="http://projetos.imd.ufrn.br/davidcardoso-ti/imd0030-projeto1/blob/master/aux.cpp">http://projetos.imd.ufrn.br/davidcardoso-ti/imd0030-projeto1/blob/master/aux.cpp</a> </dd></dl>
 </div><h2 class="groupheader">Funções</h2>
 <a class="anchor" id="aed7bbc3ea2473b1ff7cf708dd3ac3a16"></a>
 <div class="memitem">
@@ -131,7 +133,7 @@ Funções</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">pSearch *&#160;</td>
+          <td class="paramtype"><a class="el" href="aux_8h.html#a29c9bd2c7fa18295c42b0e2d954adfcc">pSearch</a> *&#160;</td>
           <td class="paramname"><em>p_search</em>&#160;</td>
         </tr>
         <tr>
@@ -145,13 +147,28 @@ Funções</h2></td></tr>
 <p>Função para selecionar o tipo de busca. </p>
 <p>Trata o tipo de busca e define o ponteiro de busca para apontar para a função de busca corretamente </p><dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">opcao</td><td>tipo de busca </td></tr>
-    <tr><td class="paramname">p_search</td><td>ponteiro de funcao busca </td></tr>
+    <tr><td class="paramname">opcao</td><td>enumeração tipo de busca </td></tr>
+    <tr><td class="paramname">busca</td><td>ponteiro de funcao para busca </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Retorna</dt><dd>true ou false' </dd></dl>
 <p>&lt; switch case - seleciona busca de acordo com o parametro informado pelo usuario </p>
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="aux_8cpp_aed7bbc3ea2473b1ff7cf708dd3ac3a16_cgraph.png" border="0" usemap="#aux_8cpp_aed7bbc3ea2473b1ff7cf708dd3ac3a16_cgraph" alt=""/></div>
+<map name="aux_8cpp_aed7bbc3ea2473b1ff7cf708dd3ac3a16_cgraph" id="aux_8cpp_aed7bbc3ea2473b1ff7cf708dd3ac3a16_cgraph">
+<area shape="rect" id="node2" href="searchs_8cpp.html#ab5e71ba34e6346e42dfd1248021fb5db" title="Função busca SEQUENCIAL na forma ITERATIVA. " alt="" coords="174,5,321,32"/>
+<area shape="rect" id="node3" href="searchs_8cpp.html#adb28275bb5edb3ef29e583593334a0d3" title="Função busca SEQUENCIAL na forma RECURSIVA. " alt="" coords="172,80,323,107"/>
+<area shape="rect" id="node4" href="searchs_8cpp.html#acbc2cdce89b6af68d457b970d6ac7f0a" title="Função busca BINÁRIA na forma ITERATIVA. " alt="" coords="186,131,309,157"/>
+<area shape="rect" id="node5" href="searchs_8cpp.html#a59dce0b43dbceaf5d889f44a9a813a2b" title="Função busca BINÁRIA na forma RECURSIVA. " alt="" coords="184,205,311,232"/>
+<area shape="rect" id="node6" href="searchs_8cpp.html#aabdfb31ebbf84a98de389021cd52793d" title="Função busca TERNÁRIA na forma ITERATIVA. " alt="" coords="183,256,311,283"/>
+<area shape="rect" id="node7" href="searchs_8cpp.html#adee4f0d7be9715b2549b93c749dc05b3" title="Função busca TERNÁRIA na forma RECURSIVA. " alt="" coords="181,307,313,333"/>
+</map>
+</div>
+</p>
 
 </div>
 </div>
