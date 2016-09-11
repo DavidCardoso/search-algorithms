@@ -1,13 +1,13 @@
 /**
 * @file 		searchs.h
 * @brief 		Funções de busca
-* @details 		Contém a declaração das funções que fazem buscas do tipo sequencial, binária e ternárias 
+* @details 		Contém a declaração das funções que fazem buscas do tipo sequencial, binária e ternárias, 
 *            	nas suas respectivas formas iterativa e recursiva.
 * @author		David Cardoso
 * @since		10/09/2016
 * @date			13/09/2016
 * @copyright 	2016 - All rights reserveds
-* @sa 			http://projetos.imd.ufrn.br/davidcardoso-ti/imd0030-projeto1.git
+* @sa 			http://projetos.imd.ufrn.br/davidcardoso-ti/imd0030-projeto1/blob/master/searchs.h
 */
 
 #ifndef 	_SEARCHS_H_
@@ -20,8 +20,11 @@
 #include <cmath>
 #include <string>
 #include <cstring>
+#include <chrono>
+#include "aux.h"
 
 using namespace std;
+using namespace std::chrono;
 
 
 /**
@@ -47,7 +50,7 @@ int busca_sequencial_ite	(int chave, int* vetor, int tamanho);
 int busca_sequencial_rec	(int chave, int* vetor, int tamanho);
 
 /**
- * @brief			Função busca binaria na forma iterativa
+ * @brief			Função busca binária na forma iterativa
  * @details			Esse tipo de busca utiliza a idea de 'dividir para conquistar'.
  *            		O vetor é dividido gradativamente em duas partes e sendo testado em qual parte deve estar a chave 
  *            		até encontrá-la ou atingir um subvetor unitário.
@@ -60,7 +63,7 @@ int busca_sequencial_rec	(int chave, int* vetor, int tamanho);
 int busca_binaria_ite		(int chave, int* vetor, int tamanho);
 
 /**
- * @brief			Função busca binaria na forma recursiva
+ * @brief			Função busca binária na forma recursiva
  * @details			Esse tipo de busca utiliza a idea de 'dividir para conquistar'.
  *            		O vetor é dividido gradativamente em duas partes e sendo testado em qual parte deve estar a chave 
  *            		até encontrá-la ou atingir um subvetor unitário.
