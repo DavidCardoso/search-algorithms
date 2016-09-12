@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>Projeto 1 - IMD0030 LP1 BTI UFRN: Código-Fonte de searchs.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo-ufrn-imd.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Projeto 1 - IMD0030 LP1 BTI UFRN
+   </div>
+   <div id="projectbrief">Implementação, experimentação e relatório de desempenho de algoritmos de buscas do tipo sequencial, binária e ternária, nas suas respectivas formas iterativa e recursiva.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;Principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&#160;relacionadas</span></a></li>
+      <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;Arquivos</span></a></li>
+      <li><a href="globals.html"><span>Membros&#160;dos&#160;Arquivos</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">searchs.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="searchs_8h.html">Vá para a documentação deste arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#ifndef     _SEARCHS_H_</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#define     _SEARCHS_H_</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#pragma     once</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="aux_8h.html">aux.h</a>&quot;</span>    <span class="comment">// funcoes e recursos auxiliares</span></div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacestd.html">std</a>;</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keywordtype">int</span> <a class="code" href="searchs_8h.html#ab5e71ba34e6346e42dfd1248021fb5db">busca_sequencial_ite</a>    (<span class="keywordtype">int</span> chave, <span class="keywordtype">int</span>* vetor, <span class="keywordtype">int</span> left, <span class="keywordtype">int</span> tamanho);</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keywordtype">int</span> <a class="code" href="searchs_8h.html#adb28275bb5edb3ef29e583593334a0d3">busca_sequencial_rec</a>    (<span class="keywordtype">int</span> chave, <span class="keywordtype">int</span>* vetor, <span class="keywordtype">int</span> left, <span class="keywordtype">int</span> tamanho);</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keywordtype">int</span> <a class="code" href="searchs_8h.html#a336771539132906be771ce4dc26834cb">busca_binaria_ite</a>       (<span class="keywordtype">int</span> chave, <span class="keywordtype">int</span>* vetor, <span class="keywordtype">int</span> left, <span class="keywordtype">int</span> right);</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keywordtype">int</span> <a class="code" href="searchs_8h.html#a59dce0b43dbceaf5d889f44a9a813a2b">busca_binaria_rec</a>       (<span class="keywordtype">int</span> chave, <span class="keywordtype">int</span>* vetor, <span class="keywordtype">int</span> left, <span class="keywordtype">int</span> right);</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keywordtype">int</span> <a class="code" href="searchs_8h.html#abf2ea2e2aabbddb51862ca3c524d64b7">busca_ternaria_ite</a>      (<span class="keywordtype">int</span> chave, <span class="keywordtype">int</span>* vetor, <span class="keywordtype">int</span> left, <span class="keywordtype">int</span> right);</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="keywordtype">int</span> <a class="code" href="searchs_8h.html#ac20fe9a6f0ecc74f6063496485d6dba1">busca_ternaria_rec</a>      (<span class="keywordtype">int</span> chave, <span class="keywordtype">int</span>* vetor, <span class="keywordtype">int</span> left, <span class="keywordtype">int</span> right);</div><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="namespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div></div>
+<div class="ttc" id="searchs_8h_html_a59dce0b43dbceaf5d889f44a9a813a2b"><div class="ttname"><a href="searchs_8h.html#a59dce0b43dbceaf5d889f44a9a813a2b">busca_binaria_rec</a></div><div class="ttdeci">int busca_binaria_rec(int chave, int *vetor, int left, int right)</div><div class="ttdoc">Função busca BINÁRIA na forma RECURSIVA. </div><div class="ttdef"><b>Definition:</b> searchs.cpp:85</div></div>
+<div class="ttc" id="searchs_8h_html_ab5e71ba34e6346e42dfd1248021fb5db"><div class="ttname"><a href="searchs_8h.html#ab5e71ba34e6346e42dfd1248021fb5db">busca_sequencial_ite</a></div><div class="ttdeci">int busca_sequencial_ite(int chave, int *vetor, int left, int tamanho)</div><div class="ttdoc">Função busca SEQUENCIAL na forma ITERATIVA. </div><div class="ttdef"><b>Definition:</b> searchs.cpp:22</div></div>
+<div class="ttc" id="aux_8h_html"><div class="ttname"><a href="aux_8h.html">aux.h</a></div><div class="ttdoc">Funções, registros, enumerações e outros recursos auxiliares. </div></div>
+<div class="ttc" id="searchs_8h_html_a336771539132906be771ce4dc26834cb"><div class="ttname"><a href="searchs_8h.html#a336771539132906be771ce4dc26834cb">busca_binaria_ite</a></div><div class="ttdeci">int busca_binaria_ite(int chave, int *vetor, int left, int right)</div><div class="ttdoc">Função busca BINÁRIA na forma ITERATIVA. </div><div class="ttdef"><b>Definition:</b> searchs.cpp:56</div></div>
+<div class="ttc" id="searchs_8h_html_abf2ea2e2aabbddb51862ca3c524d64b7"><div class="ttname"><a href="searchs_8h.html#abf2ea2e2aabbddb51862ca3c524d64b7">busca_ternaria_ite</a></div><div class="ttdeci">int busca_ternaria_ite(int chave, int *vetor, int left, int right)</div><div class="ttdoc">Função busca TERNÁRIA na forma ITERATIVA. </div><div class="ttdef"><b>Definition:</b> searchs.cpp:113</div></div>
+<div class="ttc" id="searchs_8h_html_ac20fe9a6f0ecc74f6063496485d6dba1"><div class="ttname"><a href="searchs_8h.html#ac20fe9a6f0ecc74f6063496485d6dba1">busca_ternaria_rec</a></div><div class="ttdeci">int busca_ternaria_rec(int chave, int *vetor, int left, int right)</div><div class="ttdoc">Função busca TERNÁRIA na forma RECURSIVA. </div><div class="ttdef"><b>Definition:</b> searchs.cpp:154</div></div>
+<div class="ttc" id="searchs_8h_html_adb28275bb5edb3ef29e583593334a0d3"><div class="ttname"><a href="searchs_8h.html#adb28275bb5edb3ef29e583593334a0d3">busca_sequencial_rec</a></div><div class="ttdeci">int busca_sequencial_rec(int chave, int *vetor, int left, int tamanho)</div><div class="ttdoc">Função busca SEQUENCIAL na forma RECURSIVA. </div><div class="ttdef"><b>Definition:</b> searchs.cpp:41</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>Projeto 1 - IMD0030 LP1 BTI UFRN: MAKEFILE</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo-ufrn-imd.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Projeto 1 - IMD0030 LP1 BTI UFRN
+   </div>
+   <div id="projectbrief">Implementação, experimentação e relatório de desempenho de algoritmos de buscas do tipo sequencial, binária e ternária, nas suas respectivas formas iterativa e recursiva.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;Principal</span></a></li>
+      <li class="current"><a href="pages.html"><span>Páginas&#160;relacionadas</span></a></li>
+      <li><a href="files.html"><span>Arquivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">MAKEFILE </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><em>Makefile do Programa Algoritmos de Busca</em></p>
+<p><b>Projeto 1</b> da disciplina <b>IMD0030 LP1</b>, ministrada pelo Prof. Silvio Sampaio no curso BTI da UFRN.</p>
+<dl class="section author"><dt>Autor</dt><dd>David Cardoso</dd></dl>
+<dl class="section date"><dt>Data</dt><dd>10/09/2016</dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>(c) 2016 - All rights reserveds</dd></dl>
+<h2>Variáveis</h2>
+<p>PROG = busca.exe</p>
+<p>CC = g++</p>
+<p>CPPFLAGS = -std=c++11 -Wall -pedantic -g -O0</p>
+<p>OBJS = main.o aux.o searchs.o</p>
+<h1>Executável</h1>
+<p>"$(PROG):$(OBJS)" </p><pre class="fragment">"$(CC) -o $(PROG) $(OBJS)"
+</pre><h2>Principal</h2>
+<p>main.o: <a class="el" href="aux_8h.html" title="Funções, registros, enumerações e outros recursos auxiliares. ">aux.h</a> <a class="el" href="searchs_8h.html" title="Funções de busca. ">searchs.h</a> <a class="el" href="main_8cpp.html" title="Programa Algoritmos de Busca. ">main.cpp</a> </p><pre class="fragment">"$(CC) $(CPPFLAGS) -c main.cpp"
+</pre><h2>Funções de buscas</h2>
+<p>searchs.o: <a class="el" href="searchs_8h.html" title="Funções de busca. ">searchs.h</a> <a class="el" href="searchs_8cpp.html" title="Funções de busca. ">searchs.cpp</a> </p><pre class="fragment">"$(CC) $(CPPFLAGS) -c searchs.cpp"
+</pre><h2>Funções e recursos auxiliares</h2>
+<p>aux.o: <a class="el" href="aux_8h.html" title="Funções, registros, enumerações e outros recursos auxiliares. ">aux.h</a> <a class="el" href="aux_8cpp.html" title="Funções e outros recursos auxiliares. ">aux.cpp</a> </p><pre class="fragment">"$(CC) $(CPPFLAGS) -c aux.cpp"
+</pre><h1>Comandos</h1>
+<h2>Remover arquivos executaveis e objetos compilados</h2>
+<p>clean: </p><pre class="fragment">rm -f core $(PROG) $(OBJS)
+</pre><h2>Testar o executavel com o valgrind</h2>
+<p>valgrind: </p><pre class="fragment">valgrind -v --leak-check=full --show-reachable=yes --track-origins=yes ./$(PROG) 2000000 4000000 BSI
+</pre><h2>Up stack - aumenta o tamanho da pilha</h2>
+<p>upstack: </p><pre class="fragment">sudo ulimit -s unlimited
+</pre><h2>Down stack - volta o tamanho da pilha para o default</h2>
+<p>downstack: </p><pre class="fragment">sudo ulimit -s 8192
+</pre><h2>Executar o shell script AUTORUN</h2>
+<p>run: </p><pre class="fragment">./AUTORUN.md
+</pre><h2>Remover arquivos de saida .csv</h2>
+<p>rmcsv: </p><pre class="fragment">rm csv/*.csv</pre> </div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>
