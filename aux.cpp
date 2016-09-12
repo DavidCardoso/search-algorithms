@@ -9,18 +9,10 @@
 * @sa 			http://projetos.imd.ufrn.br/davidcardoso-ti/imd0030-projeto1/blob/master/aux.cpp
 */
 
-// #include <iostream>
-// #include <sstream>
-// #include <fstream>
-// #include <cmath>
-// #include <string>
-// #include <cstring>
-// #include <chrono>
-#include "aux.h"
-#include "searchs.h"
+#include "aux.h" 		// funcoes e recursos auxiliares
+#include "searchs.h"	// funcoes de busca
 
 using namespace std;
-using namespace std::chrono;
 
 
 /**

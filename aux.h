@@ -14,16 +14,11 @@
 #pragma		once
 
 #include <iostream>         // iostream - in|out streams
-#include <sstream>          // memory streams
-#include <fstream>          // file streams
-#include <cmath>            // biblioteca matemática
 #include <string>           // classe string
 #include <cstring>          // manipulação de strings
-#include <chrono>           // usado para calcula tempo de execução
-#include "searchs.h"
+#include "searchs.h"		// funcoes de busca
 
 using namespace std;
-using namespace std::chrono;
 
 // Ponteiro para função de busca
 using pSearch = int (*)(int, int*, int, int);

@@ -102,7 +102,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 <h2>Remover arquivos executaveis e objetos compilados</h2>
 <p>clean: </p><pre class="fragment">rm -f core $(PROG) $(OBJS)
 </pre><h2>Testar o executavel com o valgrind</h2>
-<p>valgrind: </p><pre class="fragment">valgrind -v --leak-check=full --show-reachable=yes --track-origins=yes ./$(PROG) 2000000 1 BSI
+<p>valgrind: </p><pre class="fragment">valgrind -v --leak-check=full --show-reachable=yes --track-origins=yes ./$(PROG) 2000000 4000000 BSI
 </pre><h2>Up stack - aumenta o tamanho da pilha</h2>
 <p>upstack: </p><pre class="fragment">sudo ulimit -s unlimited
 </pre><h2>Down stack - volta o tamanho da pilha para o default</h2>

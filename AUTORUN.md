@@ -20,13 +20,19 @@ EXT=".csv"
 
 PATH_CSV="csv/"
 
+KEY_HIT=4000000
+
+KEY_MISS=3999999
+
+SIZE=5000000
+
 
 ###########################################################
 ## BUSCA ITERATIVA ########################################
 ###########################################################
 
 ### Workload HIT - Busca Sequencial Iterativa
-ARGUMENTOS="2000000 4000000 BSI" 
+ARGUMENTOS="${SIZE} ${KEY_HIT} BSI" 
 
 echo 	${INICIO} 	${ARGUMENTOS} $(date)
 
@@ -37,7 +43,7 @@ echo 	${FIM} 		${ARGUMENTOS} $(date)
 echo " "
 
 ### Workload MISS - Busca Sequencial Iterativa
-ARGUMENTOS="2000000 3999999 BSI"
+ARGUMENTOS="${SIZE} ${KEY_MISS} BSI"
 
 echo 	${INICIO} 	${ARGUMENTOS} $(date)
 
@@ -48,7 +54,7 @@ echo 	${FIM} 		${ARGUMENTOS} $(date)
 echo " "
 
 ### Workload HIT - Busca Binaria Iterativa
-ARGUMENTOS="2000000 4000000 BBI"
+ARGUMENTOS="${SIZE} ${KEY_HIT} BBI"
 
 echo 	${INICIO} 	${ARGUMENTOS} $(date)
 
@@ -59,7 +65,7 @@ echo 	${FIM} 		${ARGUMENTOS} $(date)
 echo " "
 
 ### Workload MISS - Busca Binaria Iterativa
-ARGUMENTOS="2000000 3999999 BBI"
+ARGUMENTOS="${SIZE} ${KEY_MISS} BBI"
 
 echo 	${INICIO} 	${ARGUMENTOS} $(date)
 
@@ -70,7 +76,7 @@ echo 	${FIM} 		${ARGUMENTOS} $(date)
 echo " "
 
 ### Workload HIT - Busca Ternaria Iterativa
-ARGUMENTOS="2000000 4000000 BTI"
+ARGUMENTOS="${SIZE} ${KEY_HIT} BTI"
 
 echo 	${INICIO} 	${ARGUMENTOS} $(date)
 
@@ -81,7 +87,7 @@ echo 	${FIM} 		${ARGUMENTOS} $(date)
 echo " "
 
 ### Workload MISS - Busca Ternaria Iterativa
-ARGUMENTOS="2000000 3999999 BTI"
+ARGUMENTOS="${SIZE} ${KEY_MISS} BTI"
 
 echo 	${INICIO} 	${ARGUMENTOS} $(date)
 
@@ -96,7 +102,7 @@ echo " "
 ###########################################################
 
 ### Workload HIT - Busca Sequencial Recursiva
-ARGUMENTOS="2000000 4000000 BSR"
+ARGUMENTOS="${SIZE} ${KEY_HIT} BSR"
 
 echo 	${INICIO} 	${ARGUMENTOS} $(date)
 
@@ -107,7 +113,7 @@ echo 	${FIM} 		${ARGUMENTOS} $(date)
 echo " "
 
 ### Workload MISS - Busca Sequencial Recursiva
-ARGUMENTOS="2000000 3999999 BSR"
+ARGUMENTOS="${SIZE} ${KEY_MISS} BSR"
 
 echo 	${INICIO} 	${ARGUMENTOS} $(date)
 
@@ -118,7 +124,7 @@ echo 	${FIM} 		${ARGUMENTOS} $(date)
 echo " "
 
 ### Workload HIT - Busca Binaria Recursiva
-ARGUMENTOS="2000000 4000000 BBR"
+ARGUMENTOS="${SIZE} ${KEY_HIT} BBR"
 
 echo 	${INICIO} 	${ARGUMENTOS} $(date)
 
@@ -129,7 +135,7 @@ echo 	${FIM} 		${ARGUMENTOS} $(date)
 echo " "
 
 ### Workload MISS - Busca Binaria Recursiva
-ARGUMENTOS="2000000 3999999 BBR"
+ARGUMENTOS="${SIZE} ${KEY_MISS} BBR"
 
 echo 	${INICIO} 	${ARGUMENTOS} $(date)
 
@@ -140,7 +146,7 @@ echo 	${FIM} 		${ARGUMENTOS} $(date)
 echo " "
 
 ### Workload HIT - Busca Ternaria Recursiva
-ARGUMENTOS="2000000 4000000 BTR"
+ARGUMENTOS="${SIZE} ${KEY_HIT} BTR"
 
 echo 	${INICIO} 	${ARGUMENTOS} $(date)
 
@@ -151,7 +157,7 @@ echo 	${FIM} 		${ARGUMENTOS} $(date)
 echo " "
 
 ### Workload MISS - Busca Ternaria Recursiva
-ARGUMENTOS="2000000 3999999 BTR"
+ARGUMENTOS="${SIZE} ${KEY_MISS} BTR"
 
 echo 	${INICIO} 	${ARGUMENTOS} $(date)
 

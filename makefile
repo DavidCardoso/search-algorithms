@@ -30,7 +30,7 @@ clean:
 
 # testa o executavel com o valgrind
 valgrind:
-	valgrind -v --leak-check=full --show-reachable=yes --track-origins=yes ./$(PROG) 2000000 1 BSI
+	valgrind -v --leak-check=full --show-reachable=yes --track-origins=yes ./$(PROG) 2000000 3999999 BSI
 
 # up stack - aumenta o tamanho da pilha
 upstack:
@@ -46,5 +46,5 @@ run:
 
 # remove arquivos de saida .csv
 rmcsv:
-	rm csv/*.csv
+	rm -f core csv/*.csv
 

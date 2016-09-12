@@ -16,17 +16,27 @@
 
 #include <iostream>         // iostream - in|out streams
 #include <sstream>          // memory streams
-#include <fstream>          // file streams
-#include <cmath>            // biblioteca matemática
 #include <string>           // classe string
 #include <cstring>          // manipulação de strings
 #include <chrono>           // usado para calcular tempo de execução
 #include "aux.h"            // funções e recursos auxiliares
 #include "searchs.h"        // funções de busca
-// #include <sys/resource.h>   // usado para aumentar o tamanho da pilha em UNIX Based Systems
+#include <sys/resource.h>   // usado para aumentar o tamanho da pilha em UNIX Based Systems
 
 using namespace	std;
 using namespace std::chrono;
+
+#ifdef LINUX
+    #define SO_LINUX true
+#endif
+
+#ifdef __linux__
+    #define SO_LINUX true
+#endif
+
+#ifndef SO_LINUX
+    #define SO_LINUX false
+#endif
 
 /**
  * @brief 		Função Principal
@@ -36,6 +46,13 @@ using namespace std::chrono;
  * @return      integer
  */
 int main(int argc, char const *argv[]){
+
+    if(SO_LINUX){
+        struct rlimit r1; /**< aumentando o tamanho da pilha em UNIX Based Systems */
+        getrlimit(RLIMIT_STACK, &r1);
+        r1.rlim_cur = 256000000;
+        setrlimit(RLIMIT_STACK, &r1);
+    }
 
 	int size_vector; 		            /**< size_vector 	- total de elementos do vetor - recebido via linha de comando */
 	int key;				            /**< key 			- chave a ser encontrada no vetor - recebida via linha de comando */
@@ -73,12 +90,6 @@ int main(int argc, char const *argv[]){
             if(strcmp(tmp_type, "BTR") == 0) search_type = BTR;
         } 
     }
-
-    // aumentando o tamanho da pilha em UNIX Based Systems
-    // struct rlimit r1;
-    // getrlimit(RLIMIT_STACK, &r1);
-    // r1.rlim_cur = 16000000;
-    // setrlimit(RLIMIT_STACK, &r1);
 
     // limpa console
     //system("clear");

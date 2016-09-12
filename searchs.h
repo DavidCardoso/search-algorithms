@@ -14,17 +14,9 @@
 #define 	_SEARCHS_H_
 #pragma		once
 
-// #include <iostream>
-// #include <sstream>
-// #include <fstream>
-// #include <cmath>
-// #include <string>
-// #include <cstring>
-// #include <chrono>
-#include "aux.h"
+#include "aux.h" 	// funcoes e recursos auxiliares
 
 using namespace std;
-using namespace std::chrono;
 
 
 /**
@@ -60,10 +52,10 @@ int busca_sequencial_rec	(int chave, int* vetor, int left, int tamanho);
  * @param  chave   	valor a ser encontrado no vetor
  * @param  vetor   	vetor a ser percorrido
  * @param  left		inicio do trecho a ser testado
- * @param  tamanho 	tamanho do vetor
+ * @param  right 	fim do trecho a ser testado
  * @return         	retorna o indice da posição que se encontra a chave ou -1, caso não encontre
  */
-int busca_binaria_ite		(int chave, int* vetor, int left, int tamanho);
+int busca_binaria_ite		(int chave, int* vetor, int left, int right);
 
 /**
  * @brief			Função busca BINÁRIA na forma RECURSIVA
@@ -88,10 +80,10 @@ int busca_binaria_rec		(int chave, int* vetor, int left, int right);
  * @param  chave   	valor a ser encontrado no vetor
  * @param  vetor   	vetor a ser percorrido
  * @param  left		inicio do trecho a ser testado
- * @param  tamanho 	tamanho do vetor
+ * @param  right 	fim do trecho a ser testado
  * @return         	retorna o indice da posição que se encontra a chave ou -1, caso não encontre
  */
-int busca_ternaria_ite		(int chave, int* vetor, int left, int tamanho);
+int busca_ternaria_ite		(int chave, int* vetor, int left, int right);
 
 /**
  * @brief			Função busca TERNÁRIA na forma RECURSIVA
@@ -102,7 +94,7 @@ int busca_ternaria_ite		(int chave, int* vetor, int left, int tamanho);
  * @param  chave   	valor a ser encontrado no vetor
  * @param  vetor   	vetor a ser percorrido
  * @param  left		inicio do trecho a ser testado
- * @param  tamanho 	tamanho do vetor
+ * @param  right 	fim do trecho a ser testado
  * @return         	retorna o indice da posição que se encontra a chave ou -1, caso não encontre
  */
 int busca_ternaria_rec		(int chave, int* vetor, int left, int right);

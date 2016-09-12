@@ -1,4 +1,5 @@
  # MAKEFILE
+ 
  @brief _Makefile do Programa Algoritmos de Busca_
 
  @details **Projeto 1** da disciplina **IMD0030 LP1**, ministrada pelo Prof. Silvio Sampaio no curso BTI da UFRN.
@@ -48,7 +49,7 @@ clean:
 ## Testar o executavel com o valgrind
 valgrind:
 
-	valgrind -v --leak-check=full --show-reachable=yes --track-origins=yes ./$(PROG) 2000000 1 BSI
+	valgrind -v --leak-check=full --show-reachable=yes --track-origins=yes ./$(PROG) 2000000 4000000 BSI
 
 ## Up stack - aumenta o tamanho da pilha
 upstack:

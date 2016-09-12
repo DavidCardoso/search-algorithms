@@ -93,36 +93,39 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 <p>PROG="./busca.exe"</p>
 <p>EXT=".csv"</p>
 <p>PATH_CSV="csv/"</p>
+<p>KEY_HIT=4000000</p>
+<p>KEY_MISS=3999999</p>
+<p>SIZE=5000000</p>
 <h6></h6>
 <h2>BUSCA ITERATIVA</h2>
 <h6></h6>
 <h3>Workload HIT - Busca Sequencial Iterativa</h3>
-<p>ARGUMENTOS="2000000 4000000 BSI"</p>
+<p>ARGUMENTOS="${SIZE} ${KEY_HIT} BSI"</p>
 <p>echo ${INICIO} ${ARGUMENTOS}  </p><pre class="fragment">    ${PROG}     ${ARGUMENTOS} &gt;&gt; "${PATH_CSV}${ARGUMENTOS}${EXT}"
 </pre><p>echo ${FIM} ${ARGUMENTOS} </p>
 <p>echo " "</p>
 <h3>Workload MISS - Busca Sequencial Iterativa</h3>
-<p>ARGUMENTOS="2000000 3999999 BSI"</p>
+<p>ARGUMENTOS="${SIZE} ${KEY_MISS} BSI"</p>
 <p>echo ${INICIO} ${ARGUMENTOS}  </p><pre class="fragment">    ${PROG}     ${ARGUMENTOS} &gt;&gt; "${PATH_CSV}${ARGUMENTOS}${EXT}"
 </pre><p>echo ${FIM} ${ARGUMENTOS} </p>
 <p>echo " "</p>
 <h3>Workload HIT - Busca Binaria Iterativa</h3>
-<p>ARGUMENTOS="2000000 4000000 BBI"</p>
+<p>ARGUMENTOS="${SIZE} ${KEY_HIT} BBI"</p>
 <p>echo ${INICIO} ${ARGUMENTOS}  </p><pre class="fragment">    ${PROG}     ${ARGUMENTOS} &gt;&gt; "${PATH_CSV}${ARGUMENTOS}${EXT}"
 </pre><p>echo ${FIM} ${ARGUMENTOS} </p>
 <p>echo " "</p>
 <h3>Workload MISS - Busca Binaria Iterativa</h3>
-<p>ARGUMENTOS="2000000 3999999 BBI"</p>
+<p>ARGUMENTOS="${SIZE} ${KEY_MISS} BBI"</p>
 <p>echo ${INICIO} ${ARGUMENTOS}  </p><pre class="fragment">    ${PROG}     ${ARGUMENTOS} &gt;&gt; "${PATH_CSV}${ARGUMENTOS}${EXT}"
 </pre><p>echo ${FIM} ${ARGUMENTOS} </p>
 <p>echo " "</p>
 <h3>Workload HIT - Busca Ternaria Iterativa</h3>
-<p>ARGUMENTOS="2000000 4000000 BTI"</p>
+<p>ARGUMENTOS="${SIZE} ${KEY_HIT} BTI"</p>
 <p>echo ${INICIO} ${ARGUMENTOS}  </p><pre class="fragment">    ${PROG}     ${ARGUMENTOS} &gt;&gt; "${PATH_CSV}${ARGUMENTOS}${EXT}"
 </pre><p>echo ${FIM} ${ARGUMENTOS} </p>
 <p>echo " "</p>
 <h3>Workload MISS - Busca Ternaria Iterativa</h3>
-<p>ARGUMENTOS="2000000 3999999 BTI"</p>
+<p>ARGUMENTOS="${SIZE} ${KEY_MISS} BTI"</p>
 <p>echo ${INICIO} ${ARGUMENTOS}  </p><pre class="fragment">    ${PROG}     ${ARGUMENTOS} &gt;&gt; "${PATH_CSV}${ARGUMENTOS}${EXT}"
 </pre><p>echo ${FIM} ${ARGUMENTOS} </p>
 <p>echo " "</p>
@@ -130,32 +133,32 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 <h2>BUSCA RECURSIVA</h2>
 <h6></h6>
 <h3>Workload HIT - Busca Sequencial Recursiva</h3>
-<p>ARGUMENTOS="2000000 4000000 BSR"</p>
+<p>ARGUMENTOS="${SIZE} ${KEY_HIT} BSR"</p>
 <p>echo ${INICIO} ${ARGUMENTOS}  </p><pre class="fragment">    ${PROG}     ${ARGUMENTOS} &gt;&gt; "${PATH_CSV}${ARGUMENTOS}${EXT}"
 </pre><p>echo ${FIM} ${ARGUMENTOS} </p>
 <p>echo " "</p>
 <h3>Workload MISS - Busca Sequencial Recursiva</h3>
-<p>ARGUMENTOS="2000000 3999999 BSR"</p>
+<p>ARGUMENTOS="${SIZE} ${KEY_MISS} BSR"</p>
 <p>echo ${INICIO} ${ARGUMENTOS}  </p><pre class="fragment">    ${PROG}     ${ARGUMENTOS} &gt;&gt; "${PATH_CSV}${ARGUMENTOS}${EXT}"
 </pre><p>echo ${FIM} ${ARGUMENTOS} </p>
 <p>echo " "</p>
 <h3>Workload HIT - Busca Binaria Recursiva</h3>
-<p>ARGUMENTOS="2000000 4000000 BBR"</p>
+<p>ARGUMENTOS="${SIZE} ${KEY_HIT} BBR"</p>
 <p>echo ${INICIO} ${ARGUMENTOS}  </p><pre class="fragment">    ${PROG}     ${ARGUMENTOS} &gt;&gt; "${PATH_CSV}${ARGUMENTOS}${EXT}"
 </pre><p>echo ${FIM} ${ARGUMENTOS} </p>
 <p>echo " "</p>
 <h3>Workload MISS - Busca Binaria Recursiva</h3>
-<p>ARGUMENTOS="2000000 3999999 BBR"</p>
+<p>ARGUMENTOS="${SIZE} ${KEY_MISS} BBR"</p>
 <p>echo ${INICIO} ${ARGUMENTOS}  </p><pre class="fragment">    ${PROG}     ${ARGUMENTOS} &gt;&gt; "${PATH_CSV}${ARGUMENTOS}${EXT}"
 </pre><p>echo ${FIM} ${ARGUMENTOS} </p>
 <p>echo " "</p>
 <h3>Workload HIT - Busca Ternaria Recursiva</h3>
-<p>ARGUMENTOS="2000000 4000000 BTR"</p>
+<p>ARGUMENTOS="${SIZE} ${KEY_HIT} BTR"</p>
 <p>echo ${INICIO} ${ARGUMENTOS}  </p><pre class="fragment">    ${PROG}     ${ARGUMENTOS} &gt;&gt; "${PATH_CSV}${ARGUMENTOS}${EXT}"
 </pre><p>echo ${FIM} ${ARGUMENTOS} </p>
 <p>echo " "</p>
 <h3>Workload MISS - Busca Ternaria Recursiva</h3>
-<p>ARGUMENTOS="2000000 3999999 BTR"</p>
+<p>ARGUMENTOS="${SIZE} ${KEY_MISS} BTR"</p>
 <p>echo ${INICIO} ${ARGUMENTOS}  </p><pre class="fragment">    ${PROG}     ${ARGUMENTOS} &gt;&gt; "${PATH_CSV}${ARGUMENTOS}${EXT}"
 </pre><p>echo ${FIM} ${ARGUMENTOS} </p>
 <p>echo " " </p>
