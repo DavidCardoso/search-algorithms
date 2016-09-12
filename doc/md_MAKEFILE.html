@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>Projeto 1 - IMD0030 LP1 BTI UFRN: Páginas relacionadas</title>
+<title>Projeto 1 - IMD0030 LP1 BTI UFRN: MAKEFILE</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -60,7 +60,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
       </li>
     </ul>
   </div>
-</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -75,19 +74,43 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 </iframe>
 </div>
 
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">Páginas relacionadas</div>  </div>
+<div class="title">MAKEFILE </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock">Esta é a lista com toda a documentação relacionadas:</div><div class="directory">
-<table class="directory">
-<tr id="row_0_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="md_AUTORUN.html" target="_self">AUTORUN</a></td><td class="desc"><em>Shell script p/ automatizar testes com vários workloads de buscas</em> </td></tr>
-<tr id="row_1_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="md_MAKEFILE.html" target="_self">MAKEFILE</a></td><td class="desc"><em>Makefile do Programa Algoritmos de Busca</em> </td></tr>
-<tr id="row_2_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="md_README.html" target="_self">README</a></td><td class="desc"><em>Informações gerais sobre o projeto</em> </td></tr>
-</table>
-</div><!-- directory -->
-</div><!-- contents -->
+<div class="textblock"><p><em>Makefile do Programa Algoritmos de Busca</em></p>
+<p><b>Projeto 1</b> da disciplina <b>IMD0030 LP1</b>, ministrada pelo Prof. Silvio Sampaio no curso BTI da UFRN.</p>
+<dl class="section author"><dt>Autor</dt><dd>David Cardoso</dd></dl>
+<dl class="section date"><dt>Data</dt><dd>10/09/2016</dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>(c) 2016 - All rights reserveds</dd></dl>
+<h2>Variáveis</h2>
+<p>PROG = busca.exe</p>
+<p>CC = g++</p>
+<p>CPPFLAGS = -std=c++11 -Wall -pedantic -g -O0</p>
+<p>OBJS = main.o aux.o searchs.o</p>
+<h1>Executável</h1>
+<p>"$(PROG):$(OBJS)" </p><pre class="fragment">"$(CC) -o $(PROG) $(OBJS)"
+</pre><h2>Principal</h2>
+<p>main.o: <a class="el" href="aux_8h.html" title="Funções, registros, enumerações e outros recursos auxiliares. ">aux.h</a> <a class="el" href="searchs_8h.html" title="Funções de busca. ">searchs.h</a> <a class="el" href="main_8cpp.html" title="Programa Algoritmos de Busca. ">main.cpp</a> </p><pre class="fragment">"$(CC) $(CPPFLAGS) -c main.cpp"
+</pre><h2>Funções de buscas</h2>
+<p>searchs.o: <a class="el" href="searchs_8h.html" title="Funções de busca. ">searchs.h</a> <a class="el" href="searchs_8cpp.html" title="Funções de busca. ">searchs.cpp</a> </p><pre class="fragment">"$(CC) $(CPPFLAGS) -c searchs.cpp"
+</pre><h2>Funções e recursos auxiliares</h2>
+<p>aux.o: <a class="el" href="aux_8h.html" title="Funções, registros, enumerações e outros recursos auxiliares. ">aux.h</a> <a class="el" href="aux_8cpp.html" title="Funções e outros recursos auxiliares. ">aux.cpp</a> </p><pre class="fragment">"$(CC) $(CPPFLAGS) -c aux.cpp"
+</pre><h1>Comandos</h1>
+<h2>Remover arquivos executaveis e objetos compilados</h2>
+<p>clean: </p><pre class="fragment">rm -f core $(PROG) $(OBJS)
+</pre><h2>Testar o executavel com o valgrind</h2>
+<p>valgrind: </p><pre class="fragment">valgrind -v --leak-check=full --show-reachable=yes --track-origins=yes ./$(PROG) 2000000 1 BSI
+</pre><h2>Up stack - aumenta o tamanho da pilha</h2>
+<p>upstack: </p><pre class="fragment">sudo ulimit -s unlimited
+</pre><h2>Down stack - volta o tamanho da pilha para o default</h2>
+<p>downstack: </p><pre class="fragment">sudo ulimit -s 8192
+</pre><h2>Executar o shell script AUTORUN</h2>
+<p>run: </p><pre class="fragment">./AUTORUN.md
+</pre><h2>Remover arquivos de saida .csv</h2>
+<p>rmcsv: </p><pre class="fragment">rm csv/*.csv</pre> </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Gerado por &#160;<a href="http://www.doxygen.org/index.html">

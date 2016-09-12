@@ -37,9 +37,9 @@ using namespace std::chrono;
  */
 int main(int argc, char const *argv[]){
 
-	int size_vector; 		            /**< size_vector 	- total de elementos do vetor que será realizado a busca */
-	int key;				            /**< key 			- chave a ser encontrada no vetor */
-    char* tmp_type = new char[4];       /**< tmp_type       - tipo do algoritmo de busca recebido via linha de comando */
+	int size_vector; 		            /**< size_vector 	- total de elementos do vetor - recebido via linha de comando */
+	int key;				            /**< key 			- chave a ser encontrada no vetor - recebida via linha de comando */
+    char* tmp_type = new char[4];       /**< tmp_type       - tipo do algoritmo de busca - recebido via linha de comando */
 	enum Searchs search_type = NA;      /**< search_type 	- enumeração de tipo do algoritmo de busca */
 
 	// valida parametros passados via linha de comando
@@ -81,7 +81,7 @@ int main(int argc, char const *argv[]){
     // setrlimit(RLIMIT_STACK, &r1);
 
     // limpa console
-    system("clear");
+    //system("clear");
 
     pSearch p_search;                                           /**< p_search   - Ponteiro para função de busca */
     bool    selected = seleciona_busca(search_type, &p_search); /**< selected   - testa se selecionou corretamente a função de busca */
@@ -94,14 +94,20 @@ int main(int argc, char const *argv[]){
         return -1;
     }
 
-    int* workload       = new int[size_vector];   /**< workload       - vetor a ser usado como workload */
+    int* workload       = new int[size_vector];   /**< workload       - vetor a ser usado como 'carga de trabalho' */
     int  workload_size  = size_vector;            /**< workload_size  - tamanho do workload a ser executado */   
+    int  workload_key   = key;                    /**< workload_key   - chave a ser buscada */
     
     // preenche o workload
     workloadFill(workload, workload_size);
 
-    cout << "Tamanho\tTempo" << endl;
+    string result_header;   /**< result_header  - titulo dos resultados */
+    string result_line;     /**< result_line    - resultado pós busca */
     
+    // imprimir titulos dos resultados
+    result_header = "\"Chave\";\"Qtd\";\"Busca\";\"Tempo\"\n";
+    cout << result_header;
+
     // workload
     while(workload_size > 0){
 
@@ -110,7 +116,7 @@ int main(int argc, char const *argv[]){
         
         // MISS - sempre busca elemento que não existe (key == impar)
         // HIT  - busca elemento existente (key == par)
-        p_search(key, workload, 0, workload_size-1);
+        p_search(workload_key, workload, 0, workload_size-1);
         
         // fim da medição
         high_resolution_clock::time_point time_final = high_resolution_clock::now();
@@ -118,9 +124,30 @@ int main(int argc, char const *argv[]){
         // duração da medição
         long double workload_time = duration<long double, std::micro>(time_final - time_initial).count();
         
-        cout << workload_size << "\t" << workload_time << endl;
+        // concatenar dados da busca
+        result_line =     "\""  
+                        + to_string(workload_key)            
+                        + "\";\"" 
+                        + to_string(workload_size)  
+                        + "\";\"" 
+                        + tmp_type      
+                        + "\";\"" 
+                        + to_string(workload_time)  
+                        + "\""
+                        + "\n";
+
+        // imprimir resultado pós busca
+        cout << result_line;
         
+        // automatiza os testes
+        // workload_size e workload_key iniciam com valor alto
         workload_size = workload_size / 2;
+        workload_key  = workload_key  / 2;
+
+        // tratamento para manter as subchaves como PAR ou IMPAR 
+        // de acordo com a chave passada via linha de comando
+        if( key%2==0 && workload_key%2==1 ) workload_key++; // par
+        if( key%2==1 && workload_key%2==0 ) workload_key++; // impar
     }
 
     // libera memoria

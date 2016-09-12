@@ -131,9 +131,9 @@ Funções</h2></td></tr>
 <tr class="memitem:aabdfb31ebbf84a98de389021cd52793d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="searchs_8h.html#aabdfb31ebbf84a98de389021cd52793d">busca_ternaria_ite</a> (int chave, int *vetor, int left, int tamanho)</td></tr>
 <tr class="memdesc:aabdfb31ebbf84a98de389021cd52793d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função busca TERNÁRIA na forma ITERATIVA.  <a href="#aabdfb31ebbf84a98de389021cd52793d">Mais...</a><br /></td></tr>
 <tr class="separator:aabdfb31ebbf84a98de389021cd52793d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adee4f0d7be9715b2549b93c749dc05b3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="searchs_8h.html#adee4f0d7be9715b2549b93c749dc05b3">busca_ternaria_rec</a> (int chave, int *vetor, int left, int tamanho)</td></tr>
-<tr class="memdesc:adee4f0d7be9715b2549b93c749dc05b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função busca TERNÁRIA na forma RECURSIVA.  <a href="#adee4f0d7be9715b2549b93c749dc05b3">Mais...</a><br /></td></tr>
-<tr class="separator:adee4f0d7be9715b2549b93c749dc05b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac20fe9a6f0ecc74f6063496485d6dba1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="searchs_8h.html#ac20fe9a6f0ecc74f6063496485d6dba1">busca_ternaria_rec</a> (int chave, int *vetor, int left, int right)</td></tr>
+<tr class="memdesc:ac20fe9a6f0ecc74f6063496485d6dba1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função busca TERNÁRIA na forma RECURSIVA.  <a href="#ac20fe9a6f0ecc74f6063496485d6dba1">Mais...</a><br /></td></tr>
+<tr class="separator:ac20fe9a6f0ecc74f6063496485d6dba1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descrição Detalhada</h2>
 <div class="textblock"><p>Funções de busca. </p>
@@ -180,10 +180,11 @@ Funções</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Função busca BINÁRIA na forma ITERATIVA. </p>
-<p>Esse tipo de busca utiliza a idea de 'dividir para conquistar'. O vetor é dividido gradativamente em duas partes e sendo testado em qual parte deve estar a chave até encontrá-la ou atingir um subvetor unitário. O vetor precisa estar ordenado. </p><dl class="params"><dt>Parâmetros</dt><dd>
+<p>Esse tipo de busca utiliza a idea de 'dividir para conquistar'. O vetor é dividido gradativamente em duas partes e vai sendo testado em qual parte deve estar a chave até encontrá-la ou atingir um subvetor unitário. O vetor precisa estar ordenado. </p><dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
     <tr><td class="paramname">chave</td><td>valor a ser encontrado no vetor </td></tr>
     <tr><td class="paramname">vetor</td><td>vetor a ser percorrido </td></tr>
+    <tr><td class="paramname">left</td><td>inicio do trecho a ser testado </td></tr>
     <tr><td class="paramname">tamanho</td><td>tamanho do vetor </td></tr>
   </table>
   </dd>
@@ -231,7 +232,7 @@ Funções</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Função busca BINÁRIA na forma RECURSIVA. </p>
-<p>Esse tipo de busca utiliza a idea de 'dividir para conquistar'. O vetor é dividido gradativamente em duas partes e sendo testado em qual parte deve estar a chave até encontrá-la ou atingir um subvetor unitário. O vetor precisa estar ordenado. </p><dl class="params"><dt>Parâmetros</dt><dd>
+<p>Esse tipo de busca utiliza a idea de 'dividir para conquistar'. O vetor é dividido gradativamente em duas partes e vai sendo testado em qual parte deve estar a chave até encontrá-la ou atingir um subvetor unitário. O vetor precisa estar ordenado. </p><dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
     <tr><td class="paramname">chave</td><td>valor a ser encontrado no vetor </td></tr>
     <tr><td class="paramname">vetor</td><td>vetor a ser percorrido </td></tr>
@@ -296,6 +297,7 @@ Este é o diagrama das funções utilizadas por esta função:</div>
   <table class="params">
     <tr><td class="paramname">chave</td><td>valor a ser encontrado no vetor </td></tr>
     <tr><td class="paramname">vetor</td><td>vetor a ser percorrido </td></tr>
+    <tr><td class="paramname">left</td><td>nao usado </td></tr>
     <tr><td class="paramname">tamanho</td><td>tamanho do vetor </td></tr>
   </table>
   </dd>
@@ -346,6 +348,7 @@ Este é o diagrama das funções utilizadas por esta função:</div>
   <table class="params">
     <tr><td class="paramname">chave</td><td>valor a ser encontrado no vetor </td></tr>
     <tr><td class="paramname">vetor</td><td>vetor a ser percorrido </td></tr>
+    <tr><td class="paramname">left</td><td>nao usado </td></tr>
     <tr><td class="paramname">tamanho</td><td>tamanho do vetor </td></tr>
   </table>
   </dd>
@@ -401,19 +404,22 @@ Este é o diagrama das funções utilizadas por esta função:</div>
 </div><div class="memdoc">
 
 <p>Função busca TERNÁRIA na forma ITERATIVA. </p>
-<p>Esse tipo de busca utiliza a idea de 'dividir para conquistar'. O vetor é dividido gradativamente em três partes e sendo testado em qual parte deve estar a chave até encontrá-la ou atingir um subvetor unitário. O vetor precisa estar ordenado. </p><dl class="params"><dt>Parâmetros</dt><dd>
+<p>Esse tipo de busca utiliza a idea de 'dividir para conquistar'. O vetor é dividido gradativamente em três partes e vai sendo testado em qual parte deve estar a chave até encontrá-la ou atingir um subvetor unitário. O vetor precisa estar ordenado. </p><dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
     <tr><td class="paramname">chave</td><td>valor a ser encontrado no vetor </td></tr>
     <tr><td class="paramname">vetor</td><td>vetor a ser percorrido </td></tr>
+    <tr><td class="paramname">left</td><td>inicio do trecho a ser testado </td></tr>
     <tr><td class="paramname">tamanho</td><td>tamanho do vetor </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Retorna</dt><dd>retorna o indice da posição que se encontra a chave ou -1, caso não encontre </dd></dl>
+<p>&lt; right - fim do trecho a ser testado</p>
+<p>&lt; meio - indice entre as duas partes do vetor </p>
 
 </div>
 </div>
-<a class="anchor" id="adee4f0d7be9715b2549b93c749dc05b3"></a>
+<a class="anchor" id="ac20fe9a6f0ecc74f6063496485d6dba1"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -439,7 +445,7 @@ Este é o diagrama das funções utilizadas por esta função:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>tamanho</em>&#160;</td>
+          <td class="paramname"><em>right</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -450,15 +456,27 @@ Este é o diagrama das funções utilizadas por esta função:</div>
 </div><div class="memdoc">
 
 <p>Função busca TERNÁRIA na forma RECURSIVA. </p>
-<p>Esse tipo de busca utiliza a idea de 'dividir para conquistar'. O vetor é dividido gradativamente em três partes e sendo testado em qual parte deve estar a chave até encontrá-la ou atingir um subvetor unitário. O vetor precisa estar ordenado. </p><dl class="params"><dt>Parâmetros</dt><dd>
+<p>Esse tipo de busca utiliza a idea de 'dividir para conquistar'. O vetor é dividido gradativamente em três partes e vai sendo testado em qual parte deve estar a chave até encontrá-la ou atingir um subvetor unitário. O vetor precisa estar ordenado. </p><dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
     <tr><td class="paramname">chave</td><td>valor a ser encontrado no vetor </td></tr>
     <tr><td class="paramname">vetor</td><td>vetor a ser percorrido </td></tr>
+    <tr><td class="paramname">left</td><td>inicio do trecho a ser testado </td></tr>
     <tr><td class="paramname">tamanho</td><td>tamanho do vetor </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Retorna</dt><dd>retorna o indice da posição que se encontra a chave ou -1, caso não encontre </dd></dl>
+<p>&lt; meio - indice entre as duas partes do vetor </p>
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="searchs_8h_ac20fe9a6f0ecc74f6063496485d6dba1_cgraph.png" border="0" usemap="#searchs_8h_ac20fe9a6f0ecc74f6063496485d6dba1_cgraph" alt=""/></div>
+<map name="searchs_8h_ac20fe9a6f0ecc74f6063496485d6dba1_cgraph" id="searchs_8h_ac20fe9a6f0ecc74f6063496485d6dba1_cgraph">
+<area shape="rect" id="node2" href="searchs_8cpp.html#ac20fe9a6f0ecc74f6063496485d6dba1" title="Função busca TERNÁRIA na forma RECURSIVA. " alt="" coords="185,29,317,56"/>
+</map>
+</div>
+</p>
 
 </div>
 </div>

@@ -147,6 +147,26 @@ int busca_ternaria_ite		(int chave, int* vetor, int left, int tamanho){
 /**
  * @brief 	Função busca TERNÁRIA na forma RECURSIVA
  */
-int busca_ternaria_rec		(int chave, int* vetor, int left, int tamanho){
+int busca_ternaria_rec		(int chave, int* vetor, int left, int right){
+	int meio; 		/**< meio - indice entre as duas partes do vetor */
+	
+	// busca em sequencia CRESCENTE
+	while(left <= right){
+		// calcula o elemento entre as duas partes
+		meio = (left+right)/2;
+		// Verifica se encontrou elemento
+		if(chave == vetor[meio]){
+			return meio;
+		}
+		// se chave está na parte direita
+		else if (chave > vetor[meio]){
+			return busca_ternaria_rec(chave, vetor, meio+1, right);
+		}
+		// se chave está na parte esquerda
+		else{
+			return busca_ternaria_rec(chave, vetor, left, meio-1);
+		}
+	}
+	// Não encontrou elemento
 	return -1;
 }

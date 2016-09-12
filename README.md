@@ -1,7 +1,9 @@
 README
 --
 
-**Projeto 1** da disciplina **IMD0030 LP1** do curso BTI da UFRN.
+@brief _Informações gerais sobre o projeto_
+
+**Projeto 1** da disciplina **IMD0030 LP1**, ministrada pelo Prof. Silvio Sampaio no curso BTI da UFRN.
 
 Programa
 --

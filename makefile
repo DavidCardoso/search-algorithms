@@ -4,11 +4,10 @@
  # @date 10/09/2016
  # @copyright (c) 2016 - All rights reserveds
 
-PROG = busca.exe
-CC = g++
-CPPFLAGS = -std=c++11 -Wall -pedantic -g -O0
-#LDFLAGS = 
-OBJS = main.o aux.o searchs.o
+PROG 		= busca.exe
+CC 			= g++
+CPPFLAGS 	= -std=c++11 -Wall -pedantic -g -O0
+OBJS 		= main.o aux.o searchs.o
 
 $(PROG):$(OBJS)
 	$(CC) -o $(PROG) $(OBJS)
@@ -30,13 +29,22 @@ clean:
 	rm -f core $(PROG) $(OBJS)
 
 # testa o executavel com o valgrind
-vg:
+valgrind:
 	valgrind -v --leak-check=full --show-reachable=yes --track-origins=yes ./$(PROG) 2000000 1 BSI
 
-# plus stack - aumenta o tamanho da pilha
-ps:
+# up stack - aumenta o tamanho da pilha
+upstack:
 	sudo ulimit -s unlimited
 
-# minus stack - volta o tamanho da pilha para o default
-ms:
+# down stack - volta o tamanho da pilha para o default
+downstack:
 	sudo ulimit -s 8192
+
+# execute o shell script AUTORUN
+run:
+	./AUTORUN.md
+
+# remove arquivos de saida .csv
+rmcsv:
+	rm csv/*.csv
+

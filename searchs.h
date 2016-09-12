@@ -105,7 +105,7 @@ int busca_ternaria_ite		(int chave, int* vetor, int left, int tamanho);
  * @param  tamanho 	tamanho do vetor
  * @return         	retorna o indice da posição que se encontra a chave ou -1, caso não encontre
  */
-int busca_ternaria_rec		(int chave, int* vetor, int left, int tamanho);
+int busca_ternaria_rec		(int chave, int* vetor, int left, int right);
 
 
 #endif
