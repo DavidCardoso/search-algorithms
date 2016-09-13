@@ -157,8 +157,17 @@ int main(int argc, char const *argv[]){
 
         // tratamento para manter as subchaves como PAR ou IMPAR 
         // de acordo com a chave passada via linha de comando
-        if( key%2==0 && workload_key%2==1 ) workload_key++; // par
-        if( key%2==1 && workload_key%2==0 ) workload_key++; // impar
+        if( key%2==0 && workload_key%2==1 ){ // par
+            if (workload_key > 1){
+                workload_key++;                
+            }else{
+                workload_key = 0;
+            }
+        }
+        if( key%2==1 && workload_key%2==0 ){ // impar
+            workload_key++;
+        }
+            
     }
 
     // libera memoria
