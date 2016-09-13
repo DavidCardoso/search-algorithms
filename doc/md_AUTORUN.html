@@ -91,76 +91,111 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 <p>INICIO="[ INI ]"</p>
 <p>FIM="[ FIM ]"</p>
 <p>PROG="./busca.exe"</p>
+<p>DATA=$(date '+DATA: d/m/Y HORA: H:M:S')</p>
 <p>EXT=".csv"</p>
 <p>PATH_CSV="csv/"</p>
 <p>KEY_HIT=4000000</p>
 <p>KEY_MISS=3999999</p>
 <p>SIZE=5000000</p>
+<h1>Início</h1>
+<p>echo "Iniciando execucao do ./AUTORUN.md ..."</p>
+<p>echo " "</p>
+<h2>Cria diretorio csv/ se não existir OU finaliza execução</h2>
+<p>if [ -e "$PATH_CSV" ] ; then </p><pre class="fragment">echo "O diretorio $PATH_CSV existe."
+
+echo " "
+</pre><p>else </p><pre class="fragment">echo "O diretorio $PATH_CSV nao existe!"
+
+echo "Criando o diretorio '$PATH_CSV' ..."
+
+mkdir "$PATH_CSV"
+
+if [ -e "$PATH_CSV" ] ; then
+
+    echo "O diretorio $PATH_CSV foi criado com sucesso!"
+
+    echo " "
+
+else
+
+    echo "O diretorio $PATH_CSV nao pode ser criado."
+
+    echo "Finalizando..."
+
+    echo " "
+
+    exit
+
+fi
+</pre><p>fi</p>
 <h6></h6>
 <h2>BUSCA ITERATIVA</h2>
 <h6></h6>
 <h3>Workload HIT - Busca Sequencial Iterativa</h3>
 <p>ARGUMENTOS="${SIZE} ${KEY_HIT} BSI"</p>
-<p>echo ${INICIO} ${ARGUMENTOS}  </p><pre class="fragment">    ${PROG}     ${ARGUMENTOS} &gt;&gt; "${PATH_CSV}${ARGUMENTOS}${EXT}"
-</pre><p>echo ${FIM} ${ARGUMENTOS} </p>
+<p>echo ${INICIO} ${ARGUMENTOS} - ${DATA} </p><pre class="fragment">    ${PROG}     ${ARGUMENTOS} &gt;&gt; "${PATH_CSV}${ARGUMENTOS}${EXT}"
+</pre><p>echo ${FIM} ${ARGUMENTOS} - ${DATA}</p>
 <p>echo " "</p>
 <h3>Workload MISS - Busca Sequencial Iterativa</h3>
 <p>ARGUMENTOS="${SIZE} ${KEY_MISS} BSI"</p>
-<p>echo ${INICIO} ${ARGUMENTOS}  </p><pre class="fragment">    ${PROG}     ${ARGUMENTOS} &gt;&gt; "${PATH_CSV}${ARGUMENTOS}${EXT}"
-</pre><p>echo ${FIM} ${ARGUMENTOS} </p>
+<p>echo ${INICIO} ${ARGUMENTOS} - ${DATA} </p><pre class="fragment">    ${PROG}     ${ARGUMENTOS} &gt;&gt; "${PATH_CSV}${ARGUMENTOS}${EXT}"
+</pre><p>echo ${FIM} ${ARGUMENTOS} - ${DATA}</p>
 <p>echo " "</p>
 <h3>Workload HIT - Busca Binaria Iterativa</h3>
 <p>ARGUMENTOS="${SIZE} ${KEY_HIT} BBI"</p>
-<p>echo ${INICIO} ${ARGUMENTOS}  </p><pre class="fragment">    ${PROG}     ${ARGUMENTOS} &gt;&gt; "${PATH_CSV}${ARGUMENTOS}${EXT}"
-</pre><p>echo ${FIM} ${ARGUMENTOS} </p>
+<p>echo ${INICIO} ${ARGUMENTOS} - ${DATA} </p><pre class="fragment">    ${PROG}     ${ARGUMENTOS} &gt;&gt; "${PATH_CSV}${ARGUMENTOS}${EXT}"
+</pre><p>echo ${FIM} ${ARGUMENTOS} - ${DATA}</p>
 <p>echo " "</p>
 <h3>Workload MISS - Busca Binaria Iterativa</h3>
 <p>ARGUMENTOS="${SIZE} ${KEY_MISS} BBI"</p>
-<p>echo ${INICIO} ${ARGUMENTOS}  </p><pre class="fragment">    ${PROG}     ${ARGUMENTOS} &gt;&gt; "${PATH_CSV}${ARGUMENTOS}${EXT}"
-</pre><p>echo ${FIM} ${ARGUMENTOS} </p>
+<p>echo ${INICIO} ${ARGUMENTOS} - ${DATA} </p><pre class="fragment">    ${PROG}     ${ARGUMENTOS} &gt;&gt; "${PATH_CSV}${ARGUMENTOS}${EXT}"
+</pre><p>echo ${FIM} ${ARGUMENTOS} - ${DATA}</p>
 <p>echo " "</p>
 <h3>Workload HIT - Busca Ternaria Iterativa</h3>
 <p>ARGUMENTOS="${SIZE} ${KEY_HIT} BTI"</p>
-<p>echo ${INICIO} ${ARGUMENTOS}  </p><pre class="fragment">    ${PROG}     ${ARGUMENTOS} &gt;&gt; "${PATH_CSV}${ARGUMENTOS}${EXT}"
-</pre><p>echo ${FIM} ${ARGUMENTOS} </p>
+<p>echo ${INICIO} ${ARGUMENTOS} - ${DATA} </p><pre class="fragment">    ${PROG}     ${ARGUMENTOS} &gt;&gt; "${PATH_CSV}${ARGUMENTOS}${EXT}"
+</pre><p>echo ${FIM} ${ARGUMENTOS} - ${DATA}</p>
 <p>echo " "</p>
 <h3>Workload MISS - Busca Ternaria Iterativa</h3>
 <p>ARGUMENTOS="${SIZE} ${KEY_MISS} BTI"</p>
-<p>echo ${INICIO} ${ARGUMENTOS}  </p><pre class="fragment">    ${PROG}     ${ARGUMENTOS} &gt;&gt; "${PATH_CSV}${ARGUMENTOS}${EXT}"
-</pre><p>echo ${FIM} ${ARGUMENTOS} </p>
+<p>echo ${INICIO} ${ARGUMENTOS} - ${DATA} </p><pre class="fragment">    ${PROG}     ${ARGUMENTOS} &gt;&gt; "${PATH_CSV}${ARGUMENTOS}${EXT}"
+</pre><p>echo ${FIM} ${ARGUMENTOS} - ${DATA}</p>
 <p>echo " "</p>
 <h6></h6>
 <h2>BUSCA RECURSIVA</h2>
 <h6></h6>
 <h3>Workload HIT - Busca Sequencial Recursiva</h3>
 <p>ARGUMENTOS="${SIZE} ${KEY_HIT} BSR"</p>
-<p>echo ${INICIO} ${ARGUMENTOS}  </p><pre class="fragment">    ${PROG}     ${ARGUMENTOS} &gt;&gt; "${PATH_CSV}${ARGUMENTOS}${EXT}"
-</pre><p>echo ${FIM} ${ARGUMENTOS} </p>
+<p>echo ${INICIO} ${ARGUMENTOS} - ${DATA} </p><pre class="fragment">    ${PROG}     ${ARGUMENTOS} &gt;&gt; "${PATH_CSV}${ARGUMENTOS}${EXT}"
+</pre><p>echo ${FIM} ${ARGUMENTOS} - ${DATA}</p>
 <p>echo " "</p>
 <h3>Workload MISS - Busca Sequencial Recursiva</h3>
 <p>ARGUMENTOS="${SIZE} ${KEY_MISS} BSR"</p>
-<p>echo ${INICIO} ${ARGUMENTOS}  </p><pre class="fragment">    ${PROG}     ${ARGUMENTOS} &gt;&gt; "${PATH_CSV}${ARGUMENTOS}${EXT}"
-</pre><p>echo ${FIM} ${ARGUMENTOS} </p>
+<p>echo ${INICIO} ${ARGUMENTOS} - ${DATA} </p><pre class="fragment">    ${PROG}     ${ARGUMENTOS} &gt;&gt; "${PATH_CSV}${ARGUMENTOS}${EXT}"
+</pre><p>echo ${FIM} ${ARGUMENTOS} - ${DATA}</p>
 <p>echo " "</p>
 <h3>Workload HIT - Busca Binaria Recursiva</h3>
 <p>ARGUMENTOS="${SIZE} ${KEY_HIT} BBR"</p>
-<p>echo ${INICIO} ${ARGUMENTOS}  </p><pre class="fragment">    ${PROG}     ${ARGUMENTOS} &gt;&gt; "${PATH_CSV}${ARGUMENTOS}${EXT}"
-</pre><p>echo ${FIM} ${ARGUMENTOS} </p>
+<p>echo ${INICIO} ${ARGUMENTOS} - ${DATA} </p><pre class="fragment">    ${PROG}     ${ARGUMENTOS} &gt;&gt; "${PATH_CSV}${ARGUMENTOS}${EXT}"
+</pre><p>echo ${FIM} ${ARGUMENTOS} - ${DATA}</p>
 <p>echo " "</p>
 <h3>Workload MISS - Busca Binaria Recursiva</h3>
 <p>ARGUMENTOS="${SIZE} ${KEY_MISS} BBR"</p>
-<p>echo ${INICIO} ${ARGUMENTOS}  </p><pre class="fragment">    ${PROG}     ${ARGUMENTOS} &gt;&gt; "${PATH_CSV}${ARGUMENTOS}${EXT}"
-</pre><p>echo ${FIM} ${ARGUMENTOS} </p>
+<p>echo ${INICIO} ${ARGUMENTOS} - ${DATA} </p><pre class="fragment">    ${PROG}     ${ARGUMENTOS} &gt;&gt; "${PATH_CSV}${ARGUMENTOS}${EXT}"
+</pre><p>echo ${FIM} ${ARGUMENTOS} - ${DATA}</p>
 <p>echo " "</p>
 <h3>Workload HIT - Busca Ternaria Recursiva</h3>
 <p>ARGUMENTOS="${SIZE} ${KEY_HIT} BTR"</p>
-<p>echo ${INICIO} ${ARGUMENTOS}  </p><pre class="fragment">    ${PROG}     ${ARGUMENTOS} &gt;&gt; "${PATH_CSV}${ARGUMENTOS}${EXT}"
-</pre><p>echo ${FIM} ${ARGUMENTOS} </p>
+<p>echo ${INICIO} ${ARGUMENTOS} - ${DATA} </p><pre class="fragment">    ${PROG}     ${ARGUMENTOS} &gt;&gt; "${PATH_CSV}${ARGUMENTOS}${EXT}"
+</pre><p>echo ${FIM} ${ARGUMENTOS} - ${DATA}</p>
 <p>echo " "</p>
 <h3>Workload MISS - Busca Ternaria Recursiva</h3>
 <p>ARGUMENTOS="${SIZE} ${KEY_MISS} BTR"</p>
-<p>echo ${INICIO} ${ARGUMENTOS}  </p><pre class="fragment">    ${PROG}     ${ARGUMENTOS} &gt;&gt; "${PATH_CSV}${ARGUMENTOS}${EXT}"
-</pre><p>echo ${FIM} ${ARGUMENTOS} </p>
+<p>echo ${INICIO} ${ARGUMENTOS} - ${DATA} </p><pre class="fragment">    ${PROG}     ${ARGUMENTOS} &gt;&gt; "${PATH_CSV}${ARGUMENTOS}${EXT}"
+</pre><p>echo ${FIM} ${ARGUMENTOS} - ${DATA}</p>
+<p>echo " "</p>
+<h1>Fim</h1>
+<p>echo "Finalizado execucao do ./AUTORUN.md"</p>
 <p>echo " " </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
