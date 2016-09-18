@@ -17,3 +17,10 @@ Objetivo
 - Para isso, serão implementados os três modelos de busca em ambas as **versões iterativa e recursiva**. 
 - As implementações deverão ser **testadas para diferentes cargas (workloads)** a fim de permitir a análise dos resultados e, com isso, concluir sobre a hipótese inicialmente dada.
 
+Informações adicionais
+--
+
+- Link do relatório: http://goo.gl/IWNtDV
+- Link dos gráficos e tabelas Hit/Miss: http://goo.gl/OZ1TYX
+- Link dos gráficos complementares: http://goo.gl/X84lP0
+- Esta documentação: file:///dir/p/projeto/imd0030-projeto1/doc/index.html

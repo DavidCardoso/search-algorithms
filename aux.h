@@ -37,11 +37,11 @@ enum Searchs {
 };
 
 /**
- * @brief 		 Função para selecionar o tipo de busca
- * @details		 Trata o tipo de busca e define o ponteiro de busca para apontar para a função de busca corretamente
- * @param  opcao enumeração tipo de busca
- * @param  busca ponteiro de funcao para busca
- * @return       true ou false'
+ * @brief 			Função para selecionar o tipo de busca
+ * @details		 	Trata o tipo de busca e define o ponteiro de busca para apontar para a função de busca corretamente
+ * @param  opcao 	enumeração tipo de busca
+ * @param  p_search ponteiro de funcao para busca
+ * @return       	true ou false'
  */
 bool seleciona_busca(Searchs opcao, pSearch* p_search);
 
