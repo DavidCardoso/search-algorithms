@@ -11,7 +11,7 @@
 * @since		10/09/2016
 * @date			13/09/2016
 * @copyright 	2016 - All rights reserveds
-* @sa 			http://projetos.imd.ufrn.br/davidcardoso-ti/imd0030-projeto1/blob/master/main.cpp
+* @sa 			https://github.com/davidcardoso-ti/search-algorithms/blob/master/main.cpp
 */
 
 #include <iostream>         // iostream - in|out streams

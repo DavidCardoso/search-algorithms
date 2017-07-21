@@ -7,7 +7,7 @@
 * @since		10/09/2016
 * @date			13/09/2016
 * @copyright 	2016 - All rights reserveds
-* @sa 			http://projetos.imd.ufrn.br/davidcardoso-ti/imd0030-projeto1/blob/master/searchs.cpp
+* @sa 			https://github.com/davidcardoso-ti/search-algorithms/blob/master/searchs.cpp
 */
 
 #include "aux.h" 		// funcoes e recursos auxiliares
